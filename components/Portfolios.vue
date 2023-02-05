@@ -8,8 +8,8 @@
         <div class="flex flex-col items-center justify-around w-1/2">
         <p class="text-xl h-1/2 flex items-center justify-around p-4">  {{Portfolios[pIndex].description}} </p>
                 <div class ="h-1/2 w-full flex items-center justify-around">
-                  <a :href="Portfolios[pIndex].repoLink" class="bg-red-400 rounded text-lg p-2 border-2 border-blue-300 text-black w-1/3"> Git Repo </a>
-                  <a :href="Portfolios[pIndex].deployLink" class="bg-green-400 rounded text-lg p-2 border-2 border-blue-300 text-black w-1/3"> Deployed Link </a>
+                  <a :href="Portfolios[pIndex].repoLink" class="bg-red-400 rounded text-lg p-2 border-2 border-blue-300 text-black w-1/3" target="_blank"> Git Repo </a>
+                  <a :href="Portfolios[pIndex].deployLink" class="bg-green-400 rounded text-lg p-2 border-2 border-blue-300 text-black w-1/3" target="_blank"> Deployed Link </a>
                 </div>
               </div>
   
@@ -46,9 +46,17 @@
         pIndex:0,
         Portfolios: [
           {
+            title: "Professional Vue Portfolio Mk.IV",
+            description:
+              "My fourth portfolio website, made in Feb of 2023. Using Nuxt3, tailwind and netlify",
+            img: "./markIV.png",
+            repoLink: "https://github.com/l1keafox/Nuxt3Folio",
+            deployLink: "https://vuerayfolio.netlify.app/",
+          },
+          {
             title: "Professional Vue Portfolio Mk.III",
             description:
-              "My Third portfolio website made in November of 2022. This uses from Vue and tailwind",
+              "My Third portfolio website made in November of 2022. This uses from Vue 3 and tailwind",
             img: "./vue.png",
             repoLink: "https://github.com/l1keafox/vueFolio",
             deployLink: "https://gorgeous-sorbet-b95f3f.netlify.app/",
@@ -69,7 +77,15 @@
             repoLink: "https://github.com/l1keafox/Rayfolio",
             deployLink: "https://l1keafox.github.io/Rayfolio/",
           },
-  
+          {
+            title: "Middle-Where",
+            description:
+              "A refractoring of middleWhere in to the full MERN + socket.io stack",
+            img: "./remiddle.png",
+            repoLink: "https://github.com/l1keafox/remiddlewhere",
+            deployLink: "https://mymiddlewhere.herokuapp.com/",
+          },
+
           {
             title: "Bubble Dungeonz",
             description:
