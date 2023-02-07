@@ -1,13 +1,13 @@
 <template>
-    <div class="flex flex-col absolute top-[130rem] w-screen text-center items-center justify-center font-noto text-slate-300">
-      <h1 class="text-7xl font-bold pb-5 text-black"> {{Portfolios[pIndex].title}}</h1>
-      <div class="w-9/12 flex h-2/3 bg-blue-400 rounded">
-        <div class="h-[30rem] w-1/2">
-          <img class="h-full rounded" :src='Portfolios[pIndex].img ' alt=""/>
+    <div class="flex flex-col absolute top-[158rem] md:top-[136rem] w-screen text-center items-center justify-center font-noto text-slate-300">
+      <h1 class="text-3xl md:text-7xl font-bold pb-5 text-black"> {{Portfolios[pIndex].title}}</h1>
+      <div class="w-9/12 flex h-[34rem] md:h-2/3 bg-blue-400 rounded flex-col md:flex-row">
+        <div class="h-[18rem] md:h-[30rem] md:w-1/2">
+          <img class="md:h-full rounded" :src='Portfolios[pIndex].img ' alt=""/>
         </div>
-        <div class="flex flex-col items-center justify-around w-1/2">
-        <p class="text-xl h-1/2 flex items-center justify-around p-4">  {{Portfolios[pIndex].description}} </p>
-                <div class ="h-1/2 w-full flex items-center justify-around">
+        <div class="flex flex-col items-center justify-around md:w-1/2">
+        <p class="text-lg md:text-xl h-1/2 flex items-center justify-around p-4">  {{Portfolios[pIndex].description}} </p>
+                <div class ="h-1/5 md:h-1/3 w-full flex items-center justify-around">
                   <a :href="Portfolios[pIndex].repoLink" class="bg-red-400 rounded text-lg p-2 border-2 border-blue-300 text-black w-1/3" target="_blank"> Git Repo </a>
                   <a :href="Portfolios[pIndex].deployLink" class="bg-green-400 rounded text-lg p-2 border-2 border-blue-300 text-black w-1/3" target="_blank"> Deployed Link </a>
                 </div>
@@ -98,7 +98,7 @@
           {
             title: "Middle-Where",
             description:
-              "A web app to find a centralized location for a group of friends. Users can create accounts and login, using google maps to display location of friends and the central meeting spot. This was my second group project of six people, I conceived the idea and pushed for MVP",
+              "A web app to find a centralized location for a group of friends. Users can create accounts and login, using google maps to display location of friends and the central meeting spot.",
             img: "./mid.png",
             repoLink: "https://github.com/l1keafox/middleWhere",
             deployLink: "https://limitless-temple-38712.herokuapp.com/",

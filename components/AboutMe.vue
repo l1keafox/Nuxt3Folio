@@ -1,9 +1,9 @@
 <template>
-    <div class="flex flex-col w-screen absolute top-[70rem] py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-noto">
+    <div class="flex flex-col w-screen absolute top-[60rem] md:top-[70rem] py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-noto">
 
         <h1 className="text-3xl font-bold text-center dark:text-slate-700 "> About Me </h1>
-        <div className="flex w-4/5 mx-auto">
-          <img className="w-80 h-80 top-[4rem] relative rounded-full mr-5" src='@/assets/avatar.jpg' />
+        <div className="flex w-4/5 mx-auto flex-col md:flex-row">
+          <img className="w-80 h-80 left-[2rem] md:left-[1px] md:top-[4rem] relative rounded-full " src='@/assets/avatar.jpg' />
           <div className="text-base p-2 font-serif dark:text-slate-700">
             <p>
               My name is Ray and I am from Boulder, Colorado. I am a

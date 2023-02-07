@@ -3,13 +3,15 @@
 		<div id="blueSplit" class="overflow-hidden"></div>
 
 		<div id="greyParent">
-			<div id="greySplitTop"></div>
-			<div id="greySplitMiddle"></div>
-			<div id="greySplitBottom"></div>
+			<div id="greySplitTop" class="md:top-[100px]"></div>
+			<div id="greySplitMiddle" class="top-[-120px] h-[700px] md:h-[500px]"></div>
+			<div id="greySplitBottom" class="top-[-150px] md:top-[-500px]"></div>
 		</div>
-		<div id="blackSplit"></div>
+		<div id="blackSplit" class="md:h-[80rem] h-[75rem]"></div>
 	</div>
 </template>
+top: -120px;
+height: 350px;
 
 <script>
 export default {
@@ -40,7 +42,6 @@ export default {
 }
 #blackSplit {
 	position: relative;
-	height: 1500px;
 	width: 100%;
 	top: 80px;
 	background-color: rgb(20, 20, 20);
@@ -58,22 +59,19 @@ export default {
 	position: relative;
 	width: 100%;
 	height: 500px;
-	top: 100px;
+	
 	background-color: rgb(226, 226, 226);
 	transform: skew(0deg, 5deg);
 }
 #greySplitMiddle {
 	position: relative;
 	width: 100%;
-	top: -120px;
-	height: 350px;
 	background-color: rgb(226, 226, 226);
 }
 #greySplitBottom {
 	position: relative;
 	width: 100%;
 	height: 500px;
-	top: -350px;
 	background-color: rgb(226, 226, 226);
 	transform: skew(0deg, -5deg);
 }
