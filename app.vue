@@ -7,8 +7,6 @@
   <div v-if="introDone" >
     <Background />
     <Intro />
-
-    
     <Skillset/>
     <AboutMe/>
     <Portfolios/>

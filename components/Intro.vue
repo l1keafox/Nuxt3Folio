@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col text-center items-center justify-center font-mono text-slate-700 z-10 absolute top-[13rem] text-4xl p-10">
+	<div class="flex flex-col text-center items-center justify-center font-mono text-slate-700 z-10 absolute top-[5rem] md:top-[13rem] text-4xl p-10">
 		<p>
 			I am a<span class="text-green-400"> full stack </span>software engineer
 			with a background in <span class="text-red-600">malware</span> research. I

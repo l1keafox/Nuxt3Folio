@@ -1,7 +1,7 @@
 <template>
 	<div
-		class="flex flex-col items-center justify-center h-screen text-slate-50 text-9xl absolute top-0">
-		<h1 data-value="RAYMOND LEWIS" class="font-josefin ml-5">RAYMOND LEWIS</h1>
+		class="flex flex-col items-center justify-center h-screen text-slate-50 absolute top-0">
+		<h1 data-value="RAYMOND LEWIS" class="font-josefin ml-5 text-8xl md:text-9xl ">RAYMOND LEWIS</h1>
 		<div class="font-josefin text-xl items-end justify-end" id="ClickInfo">
 			Click Anywhere
 		</div>
