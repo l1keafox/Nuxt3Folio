@@ -7,7 +7,7 @@
 			<div id="greySplitMiddle" class="top-[-120px] h-[700px] md:h-[500px]"></div>
 			<div id="greySplitBottom" class="top-[-150px] md:top-[-500px]"></div>
 		</div>
-		<div id="blackSplit" class="md:h-[80rem] h-[75rem]"></div>
+		<div id="blackSplit" class="md:h-[92rem] h-[85rem]"></div>
 	</div>
 </template>
 top: -120px;
