@@ -5,21 +5,21 @@
           </p>
           <br/>
         <div class="flex items-center justify-center flex-wrap px-5">
-            <Icon name="ion:logo-html5"/>
-            <Icon name="ion:logo-react"/>
-            <Icon name="ion:logo-jest"/>
-            <Icon name="akar-icons:bootstrap-fill"/>
-            <Icon name="vscode-icons:file-type-mysql"/>
-            <Icon name="logos:mongodb-icon"/>
-            <Icon name="simple-icons:socketdotio"/>
-            <Icon name="akar-icons:graphql-fill"/>
-            <Icon name="logos:tailwindcss-icon"/>
-            <Icon name="simple-icons:handlebarsdotjs"/>
-            <Icon name="bi:github"/>
-            <Icon name="logos:nodejs"/>
-            <Icon name="mdi:npm"/>
-            <Icon name="vscode-icons:file-type-vue"/>
-            <Icon name="vscode-icons:file-type-nuxt"/>
+            <Icon class="iconSet" name="ion:logo-html5"/>
+            <Icon class="iconSet" name="ion:logo-react"/>
+            <Icon class="iconSet" name="file-icons:jest"/>
+            <Icon class="iconSet" name="akar-icons:bootstrap-fill"/>
+            <Icon class="iconSet" name="fontisto:mysql"/>
+            <Icon class="iconSet" name="simple-icons:mongodb"/>
+            <Icon class="iconSet" name="simple-icons:socketdotio"/>
+            <Icon class="iconSet" name="akar-icons:graphql-fill"/>
+            <Icon class="iconSet" name="simple-icons:tailwindcss"/>
+            <Icon class="iconSet" name="simple-icons:handlebarsdotjs"/>
+            <Icon class="iconSet" name="bi:github"/>
+            <Icon class="iconSet" name="teenyicons:nodejs-solid"/>
+            <Icon class="iconSet" name="mdi:npm"/>
+            <Icon class="iconSet" name="vscode-icons:file-type-vue"/>
+            <Icon class="iconSet" name="vscode-icons:file-type-nuxt"/>
         </div>
     </div>
 </template>
@@ -28,5 +28,7 @@
 </script>
 
 <style scoped>
-
+.iconSet{
+    color:azure
+}
 </style>
