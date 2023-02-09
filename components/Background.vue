@@ -1,6 +1,7 @@
 <template>
-	<div id="backGround" class="overflow-hidden">
-		<div id="blueSplit" class="overflow-hidden"></div>
+	<Transition v-show="showAnime" >
+		<div id="backGround" class="overflow-hidden">
+			<div id="blueSplit" class="overflow-hidden"></div>
 
 		<div id="greyParent">
 			<div id="greySplitTop" class="md:top-[100px]"></div>
@@ -9,6 +10,7 @@
 		</div>
 		<div id="blackSplit" class="md:h-[92rem] h-[85rem]"></div>
 	</div>
+</Transition>
 </template>
 top: -120px;
 height: 350px;
@@ -16,6 +18,16 @@ height: 350px;
 <script>
 export default {
 	name: "BackGround",
+	data(){
+		return {
+			showAnime: false
+		}
+	},
+	mounted(){
+		setTimeout(()=>{
+			this.showAnime = true;
+		},100)
+	}
 };
 </script>
 
@@ -23,7 +35,15 @@ export default {
 * {
 	transition: all 0.1s linear;
 }
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1.5s ease;
+}
 
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 #backGround {
 	position: absolute;
 	top: 0;
@@ -75,4 +95,5 @@ export default {
 	background-color: rgb(226, 226, 226);
 	transform: skew(0deg, -5deg);
 }
+
 </style>

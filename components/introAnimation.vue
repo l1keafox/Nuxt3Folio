@@ -4,7 +4,7 @@
 
 <script setup>
   import anime from "animejs/lib/anime.es.js";
-  const emit = defineEmits(['update:intro'])
+  const emit = defineEmits(['update:intro','startAnim'])
 
   onMounted(() => {
 	let wrapper = document.getElementById("tiles");
@@ -27,10 +27,10 @@
 				from: index,
 			}),
 		});
-
+		emit("startAnim")
 		setTimeout(() => {
 			emit("update:intro",true)
-		}, 1000);
+		}, 1500);
 	};
 
 	const createTile = (index) => {
