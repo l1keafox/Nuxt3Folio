@@ -46,5 +46,6 @@
 #ClickInfo {
 	animation: redGlow 3s infinite;
 }
+
 </style>
 

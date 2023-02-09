@@ -1,4 +1,5 @@
 <template>
+	<Transition v-show="showAnime" >
 	<div class="flex flex-col text-center items-center justify-center font-mono text-slate-700 z-10 absolute top-[5rem] md:top-[13rem] text-4xl p-10">
 		<p>
 			I am a<span class="text-green-400"> full stack </span>software engineer
@@ -7,18 +8,27 @@
 			relationships.
 		</p>
 	</div>
+</Transition>
 </template>
 
-<script setup></script>
+<script setup>
+const showAnime = ref(false)
+onMounted(()=>{
+	setTimeout(()=>{
+			showAnime.value = true;
+		},100)
+
+})
+</script>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 1.5s ease;
+.v-enter-active,
+.v-leave-active {
+  transition: filter 1.5s ease;
 }
 
-.fade-enter-from,
-.fade-leave-to {
-	opacity: 0;
+.v-enter-from,
+.v-leave-to {
+  filter:blur(3px);
 }
 </style>

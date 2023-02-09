@@ -1,4 +1,5 @@
 <template>
+  <Transition v-show="showAnime" >
     <div class="flex flex-col w-screen absolute top-[60rem] md:top-[70rem] py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-noto">
 
         <h1 className="text-3xl font-bold text-center dark:text-slate-700 "> About Me </h1>
@@ -50,12 +51,29 @@
           </div>
         </div>        
     </div>
+  </Transition>
 </template>
 
-<script>
+<script setup>
+const showAnime = ref(false)
+onMounted(()=>{
+	setTimeout(()=>{
+			showAnime.value = true;
+		},100)
+
+})
 </script>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: filter 1.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  filter:blur(3px);
+}
 p{
     text-align: justify;
 }

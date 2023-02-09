@@ -1,22 +1,28 @@
 <template>
-	<IntroAnimation v-model:intro="introDone"/>
+	  <IntroAnimation v-model:intro="introDone" @startAnim="triggerAnime"/>
+  <Transition>
+    <div id="welcome" v-if="!clearIntro" class ="pointer-events-none">
+      <LandingPage/>
+    </div>
+  </Transition>
 
-  <div id="welcome" v-if="!introDone" class ="pointer-events-none">
-    <LandingPage/>
-  </div>
   <div v-if="introDone" >
     <Background />
     <Intro />
-    <Skillset/>
-    <AboutMe/>
-    <Portfolios/>
-    <Resume/>
-    <ContactMe/>
+    <Skillset />
+    <AboutMe />
+    <Portfolios />
+    <Resume />
+    <ContactMe />
   </div>
 </template>
 
 <script setup>
     let introDone = ref(false);
+    let clearIntro = ref(false);
+    function triggerAnime(){
+      clearIntro.value = true;
+    }
 </script>
 
 <style>
@@ -45,5 +51,14 @@ body {
   overflow-x: hidden;
 	animation: background-pan 10s linear infinite;
 	background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

@@ -1,4 +1,6 @@
 <template>
+    <Transition v-show="showAnime" >
+
     <div class="absolute w-full flex flex-col items-center justify-center md:top-[46rem] top-[43rem]">
         <p className="text-5xl block relative text-center font-ubuntu  dark:text-slate-400">
             My Skillset
@@ -22,12 +24,29 @@
             <Icon class="iconSet" name="vscode-icons:file-type-nuxt"/>
         </div>
     </div>
+</Transition>
 </template>
 
-<script>
+<script setup>
+const showAnime = ref(false)
+onMounted(()=>{
+	setTimeout(()=>{
+			showAnime.value = true;
+		},100)
+
+})
 </script>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 .iconSet{
     color:azure
 }
