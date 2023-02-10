@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="h-[42rem]">
 		<h1 class="text-3xl md:text-7xl font-bold pb-5 text-slate-300">
 			{{ project.title }}
 		</h1>

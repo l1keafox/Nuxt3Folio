@@ -4,7 +4,7 @@
 
         <h1 className="text-4xl font-bold text-center dark:text-slate-900 "> About Me </h1>
         <div className="flex w-4/5 mx-auto flex-col md:flex-row">
-          <img className="w-80 h-80 left-[2rem] md:-left-[13px] md:top-[4rem] relative rounded-full " src='@/assets/avatar.jpg' />
+          <img className="w-80 h-80 md:-left-[13px] md:top-[4rem] relative rounded-full " src='@/assets/avatar.jpg' />
           <div className="text-base p-2 font-serif dark:text-slate-700">
             <p>
               My name is Ray and I am from Boulder, Colorado. I am a
