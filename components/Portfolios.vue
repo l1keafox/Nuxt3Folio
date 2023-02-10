@@ -7,7 +7,7 @@
 			</template>
 		</div>
 
-		<div class="flex pt-3 w-1/3 justify-around items-center absolute top-[44rem] md:top-[36rem]">
+		<div class="flex pt-3 w-1/3 justify-around items-center absolute top-[44rem] md:top-[44rem]">
 			
 			<MyButton text="&lt;&lt;" color="bg-slate-600" hover="bg-slate-700" @click="indexRight"/>
 			<MyButton text=">>" color="bg-slate-600" hover="bg-slate-700" @click="indexLeft"/>
@@ -154,7 +154,9 @@ export default {
 
 .right{
   position: absolute;
-  right: 0;
+  left: 0;
   transform: translateX(-100%);
 }
 </style>
+  <!-- right: 0;
+  transform: translateX(-100%); -->
