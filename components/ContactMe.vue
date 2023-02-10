@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col absolute  top-[270rem] md:top-[265rem] w-screen  py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-mono text-slate-300">
+    <div class="flex flex-col absolute  top-[270rem] md:top-[260rem] w-screen  py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-mono text-slate-300">
         <h1> Contact Me </h1>
         <br/>
         <div class ="flex justify-around items-center">
@@ -28,5 +28,6 @@
 <style scoped>
 a{
     padding: 5px;
+    transition: all .5s ease;
 }
 </style>

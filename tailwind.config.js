@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      mukta:["Mukta", "sans-serif"],
+      josefin:["Josefin Sans", "sans-serif"]
+    }
   },
   plugins: [],
 }

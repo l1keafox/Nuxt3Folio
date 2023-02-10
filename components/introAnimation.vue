@@ -5,6 +5,7 @@
 <script setup>
   import anime from "animejs/lib/anime.es.js";
   const emit = defineEmits(['update:intro','startAnim'])
+	const logged  = useLogged();
 
   onMounted(() => {
 	let wrapper = document.getElementById("tiles");
@@ -30,6 +31,7 @@
 		emit("startAnim")
 		setTimeout(() => {
 			emit("update:intro",true)
+			logged.changeMe();
 		}, 1500);
 	};
 

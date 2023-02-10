@@ -3,7 +3,7 @@
 		<div
 			class="absolute w-full flex flex-col items-center justify-center md:top-[46rem] top-[43rem]">
 			<p
-				className="text-5xl block relative text-center font-ubuntu  dark:text-slate-400">
+				className="text-5xl block relative text-center font-mukta  dark:text-slate-400">
 				My Skillset
 			</p>
 			<br />
@@ -53,8 +53,8 @@ onMounted(() => {
 	position: relative;
 	display: inline-block;
 	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+	transition: all .5s ease;
 }
-
 /* Tooltip text */
 .tooltip .tooltiptext {
 	visibility: hidden;

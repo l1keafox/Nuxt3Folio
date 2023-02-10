@@ -8,7 +8,7 @@
 			<div id="greySplitMiddle" class="top-[-120px] h-[700px] md:h-[500px]"></div>
 			<div id="greySplitBottom" class="top-[-150px] md:top-[-500px]"></div>
 		</div>
-		<div id="blackSplit" class="md:h-[92rem] h-[85rem]"></div>
+		<div id="blackSplit" class="md:h-[85rem] h-[85rem]"></div>
 	</div>
 </Transition>
 </template>
@@ -80,19 +80,19 @@ export default {
 	width: 100%;
 	height: 500px;
 	
-	background-color: rgb(226, 226, 226);
+	background-color: rgb(200, 200, 200);
 	transform: skew(0deg, 5deg);
 }
 #greySplitMiddle {
 	position: relative;
 	width: 100%;
-	background-color: rgb(226, 226, 226);
+	background-color: rgb(200, 200, 200);
 }
 #greySplitBottom {
 	position: relative;
 	width: 100%;
 	height: 500px;
-	background-color: rgb(226, 226, 226);
+	background-color: rgb(200, 200, 200);
 	transform: skew(0deg, -5deg);
 }
 
