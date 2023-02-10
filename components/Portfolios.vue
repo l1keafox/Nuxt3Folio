@@ -156,6 +156,10 @@ export default {
   left: 0;
   transform: translateX(-100%);
 }
+.center{
+  position: absolute;
+	width: 100%;
+}
 
 .right{
   position: absolute;
