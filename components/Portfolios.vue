@@ -3,7 +3,7 @@
 
 		<div id="projectContainer">
 			<template v-for="(project,index) in Portfolios" :key="index">
-				<Project v-if="index == pIndex || index == prevIndex || index == nextIndex" :class="{'left':index == prevIndex  ,'center':index == pIndex , 'right':index == nextIndex }" :project="Portfolios[index]" class="project absolute  flex  flex-col items-center justify-center"/>
+				<Project v-if="index == pIndex || index == prevIndex || index == nextIndex" :class="{'left':index == prevIndex  ,'center':index == pIndex , 'right':index == nextIndex }" :project="Portfolios[index]" class="project absolute flex  flex-col items-center justify-center"/>
 			</template>
 		</div>
 
