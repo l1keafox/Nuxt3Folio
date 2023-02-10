@@ -1,6 +1,6 @@
 <template>
   <Transition v-show="showAnime" >
-    <div class="flex flex-col w-screen absolute top-[60rem] md:top-[65rem] py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-josefin">
+    <div class="flex flex-col w-screen absolute top-[60rem] md:top-[62rem] lg:top-[62rem]  xl:top-[70rem]  py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-josefin">
 
         <h1 className="text-4xl font-bold text-center dark:text-slate-900 "> About Me </h1>
         <div className="flex w-4/5 mx-auto flex-col md:flex-row">

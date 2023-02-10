@@ -1,7 +1,7 @@
 <template>
 	<Transition v-show="showAnime">
 		<div
-			class="absolute w-full flex flex-col items-center justify-center md:top-[46rem] top-[43rem] overflow-hidden">
+			class="absolute w-full flex flex-col items-center justify-center  lg:top-[43rem] md:top-[43rem] top-[40rem] overflow-hidden h-[15rem]">
 			<p
 				className="text-5xl block relative text-center font-mukta  dark:text-slate-400">
 				My Skillset
