@@ -8,12 +8,14 @@
 
 <div v-if="introDone" >
   <Background />
+  <div id="intro" class="absolute top-1"> </div>
+
   <Intro />
-  <Skillset />
-  <AboutMe />
-  <Portfolios />
-  <Resume />
-  <ContactMe />
+  <Skillset id="skillSet"/>
+  <AboutMe id="aboutMe"/>
+  <Portfolios id="portfolios"/>
+  <Resume id="resume"/>
+  <ContactMe id="contactMe"/>
 </div>
 </template>
 
@@ -60,5 +62,8 @@ transition: opacity 0.5s ease;
 .v-enter-from,
 .v-leave-to {
 opacity: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 </style>
