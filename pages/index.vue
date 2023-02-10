@@ -1,7 +1,7 @@
 <template>
   <IntroAnimation v-model:intro="introDone" @startAnim="triggerAnime"/>
 <Transition>
-  <div id="welcome" v-if="!clearIntro" class ="pointer-events-none">
+  <div id="welcome" v-if="!clearIntro" class ="pointer-events-none overflow-x-hidden">
     <LandingPage/>
   </div>
 </Transition>

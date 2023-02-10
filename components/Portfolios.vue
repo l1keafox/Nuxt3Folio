@@ -1,13 +1,13 @@
 <template>
-	<div class="flex flex-col absolute top-[154rem] md:top-[136rem] w-screen text-center items-center justify-cente  font-mukta text-slate-300 ">
+	<div class="flex flex-col absolute top-[168rem] md:top-[132rem] w-screen text-center items-center justify-cente  font-mukta text-slate-300 ">
 
-		<div id="projectContainer">
+		<div id="projectContainer" class="">
 			<template v-for="(project,index) in Portfolios" :key="index">
 				<Project v-if="index == pIndex || index == prevIndex || index == nextIndex" :class="{'left':index == prevIndex  ,'center':index == pIndex , 'right':index == nextIndex }" :project="Portfolios[index]" class="project absolute flex  flex-col items-center justify-center"/>
 			</template>
 		</div>
 
-		<div class="flex pt-3 w-1/3 justify-around items-center absolute top-[46rem] md:top-[36rem]">
+		<div class="flex pt-3 w-1/3 justify-around items-center absolute top-[44rem] md:top-[44rem]">
 			
 			<MyButton text="&lt;&lt;" color="bg-slate-600" hover="bg-slate-700" @click="indexRight"/>
 			<MyButton text=">>" color="bg-slate-600" hover="bg-slate-700" @click="indexLeft"/>
@@ -154,7 +154,9 @@ export default {
 
 .right{
   position: absolute;
-  right: 0;
-  transform: translateX(100%);
+  left: 0;
+  transform: translateX(-100%);
 }
 </style>
+  <!-- right: 0;
+  transform: translateX(-100%); -->

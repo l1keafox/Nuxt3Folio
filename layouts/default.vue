@@ -1,6 +1,6 @@
 <template>
   <Transition v-show="logged.in" >
-  <nav v-if="logged.in" class="fixed z-50 flex md:flex-col text-white">
+  <nav v-if="logged.in" class="fixed z-50 flex md:flex-col text-white overflow-hidden">
     <template v-for="option in MenuOptions" :key="option.id">
       <NuxtLink :to="option.id" :class="tailWind">{{option.word}}</NuxtLink>
     </template>

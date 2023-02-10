@@ -1,12 +1,12 @@
 <template>
-	<div>
+	<div class="h-[42rem]">
 		<h1 class="text-3xl md:text-7xl font-bold pb-5 text-slate-300">
 			{{ project.title }}
 		</h1>
 		<div
 			class="w-9/12 flex h-[42rem] md:h-2/3 bg-blue-400 rounded flex-col md:flex-row">
 			<div class="h-[18rem] md:h-[30rem] md:w-1/2">
-				<img class="md:h-full rounded" :src="project.img" alt="" />
+				<img class="md:h-fit rounded" :src="project.img" alt="" />
 			</div>
 			<div class="flex flex-col items-center justify-around md:w-1/2">
 				<p
