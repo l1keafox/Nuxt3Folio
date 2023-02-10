@@ -1,42 +1,20 @@
 <template>
-	<div
-		class="flex flex-col absolute top-[158rem] md:top-[136rem] w-screen text-center items-center justify-center font-noto text-slate-300">
-		<h1 class="text-3xl md:text-7xl font-bold pb-5 text-slate-300">
-			{{ Portfolios[pIndex].title }}
-		</h1>
-		<div
-			class="w-9/12 flex h-[34rem] md:h-2/3 bg-blue-400 rounded flex-col md:flex-row">
-			<div class="h-[18rem] md:h-[30rem] md:w-1/2">
-				<img class="md:h-full rounded" :src="Portfolios[pIndex].img" alt="" />
-			</div>
-			<div class="flex flex-col items-center justify-around md:w-1/2">
-				<p
-					class="text-lg md:text-xl h-1/2 flex items-center justify-around p-4">
-					{{ Portfolios[pIndex].description }}
-				</p>
-				<div class="h-1/5 md:h-1/3 w-full flex items-center justify-around">
-					<a
-						:href="Portfolios[pIndex].repoLink"
-						class="bg-red-400 rounded text-lg p-2 border-2 border-blue-300 text-black w-1/3 hover:bg-red-700 hover:scale-105"
-						target="_blank">
-						Git Repo
-					</a>
-					<a
-						:href="Portfolios[pIndex].deployLink"
-						class="bg-green-400 rounded text-lg p-2 border-2 border-blue-300 text-black w-1/3 hover:bg-green-700 hover:scale-105"
-						target="_blank">
-						Deployed Link
-					</a>
-				</div>
-			</div>
+	<div class="flex flex-col absolute top-[158rem] md:top-[136rem] w-screen text-center items-center justify-cente  font-noto text-slate-300 ">
+
+		<div id="projectContainer">
+			<template v-for="(project,index) in Portfolios" :key="index">
+				<Project v-if="index == pIndex || index == prevIndex || index == nextIndex" :class="{'left':index == prevIndex  ,'center':index == pIndex , 'right':index == nextIndex }" :project="Portfolios[index]" class="project absolute  flex  flex-col items-center justify-center"/>
+			</template>
 		</div>
-		<div class="flex pt-3 w-1/3 justify-around">
+
+		<div class="flex pt-3 w-1/3 justify-around items-center absolute top-[37rem] md:top-[36rem]">
 			<button @click="indexLeft" class="bg-slate-600 p-3 rounded-lg hover:bg-slate-700 hover:scale-105">
 				&lt;&lt;
 			</button>
 			<button class="bg-slate-600 p-3 rounded-lg hover:bg-slate-700 hover:scale-105" @click="indexRight">
 				>>
 			</button>
+
 		</div>
 	</div>
 </template>
@@ -44,18 +22,28 @@
 <script>
 export default {
 	name: "MyPortfolio",
+	computed:{
+		nextIndex(){
+			return this.pIndex + 1 > this.Portfolios.length-1 ? 0 : this.pIndex + 1 ;
+		},
+		prevIndex(){
+			return this.pIndex -1 < 0 ? this.Portfolios.length-1 : this.pIndex-1 ;
+		}
+	},
 	methods: {
-		indexLeft() {
+		indexRight() {
 			this.pIndex--;
 			if (this.pIndex < 0) {
 				this.pIndex = this.Portfolios.length - 1;
 			}
+			console.log(this.prevIndex, this.pIndex, this.nextIndex);
 		},
-		indexRight() {
+		indexLeft() {
 			this.pIndex++;
 			if (this.pIndex >= this.Portfolios.length) {
 				this.pIndex = 0;
 			}
+			console.log(this.prevIndex, this.pIndex, this.nextIndex);
 		},
 		currentPortfolio() {
 			return this.Portfolios;
@@ -149,8 +137,29 @@ export default {
 				},
 			],
 		};
-	},
+	}
+	
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.project{
+	transition: all 0.5s ease;
+}
+
+#projectContainer{
+	width: 100%;
+	display:flex;
+}
+.left{
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.right{
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+}
+</style>
