@@ -1,15 +1,22 @@
 <template>
-	<div
-		class="flex flex-col items-center justify-center h-screen text-slate-50 absolute top-0">
-		<h1 data-value="RAYMOND LEWIS" class="font-josefin ml-5 text-5xl md:text-9xl ">ADFNVHD REDTS</h1>
+	<Transition v-show="mounted" >
+	<div class="flex flex-col items-center justify-center h-screen text-slate-50 absolute top-0">
+		<h1 data-value="RAYMOND LEWIS" class="font-josefin ml-5 text-5xl md:text-9xl ">_______ _____</h1>
 		<div class="font-josefin text-xl items-end justify-end" id="ClickInfo">
 			Click Anywhere
 		</div>
 	</div>
+</Transition>
 </template>
 
 <script setup>
+	const logged  = useLogged();
+	let mounted = ref(false);
 	onMounted(() => {
+		setInterval(()=>{
+			mounted.value = true;
+		},100)
+		
 		const letters = "ABCEDFGHIJKLMNOPQRSTUVWXYZ";
 		let docu = document.querySelector("h1");
 		let iterations = 0;
@@ -46,6 +53,14 @@
 #ClickInfo {
 	animation: redGlow 3s infinite;
 }
+.v-enter-active,
+.v-leave-active {
+transition: opacity 0.5s ease;
+}
 
+.v-enter-from,
+.v-leave-to {
+opacity: 0;
+}
 </style>
 
