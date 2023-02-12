@@ -8,7 +8,7 @@
 			<div id="greySplitMiddle" class="top-[-120px] h-[900px]  md:h-[730px] lg:h-[500px]"></div>
 			<div id="greySplitBottom" class="top-[-150px] md:top-[-500px]"></div>
 		</div>
-		<div id="blackSplit" class="md:h-[85rem] h-[70rem]"></div>
+		<div id="blackSplit" class="md:h-[95rem] h-[70rem]"></div>
 	</div>
 </Transition>
 </template>
