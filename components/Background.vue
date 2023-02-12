@@ -8,12 +8,12 @@
 				<div id="greySplitMiddle" class="top-[-120px] h-[900px]  md:h-[730px] lg:h-[500px]"></div>
 				<div id="greySplitBottom" class="top-[-150px] md:top-[-500px]"></div>
 			</div>
-			<div id="redParent" class = "-top-[50px]">
+			<div id="redParent" class = "top-[80px] md:-top-[50px]">
 				<div id="redSplitTop" class="md:top-[100px]"></div>
-				<div id="redSplitMiddle" class="top-[-120px] h-[900px]  md:h-[730px] lg:h-[500px]"></div>
-				<div id="redSplitBottom" class="top-[-150px] md:top-[-500px]"></div>
+				<div id="redSplitMiddle" class="top-[-120px] h-[100px]  md:h-[730px] lg:h-[500px]"></div>
+				<div id="redSplitBottom" class="top-[-450px] md:top-[-500px]"></div>
 			</div>
-				<div id="blackSplit" class="md:h-[75rem] h-[70rem] top-[55rem]"></div>
+				<div id="blackSplit" class="md:h-[75rem] h-[43rem] top-[32rem] md:top-[45rem]"></div>
 
 	</div>
 </Transition>

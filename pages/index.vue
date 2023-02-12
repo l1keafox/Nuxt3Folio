@@ -11,11 +11,11 @@
 <div v-if="introDone" >
   <Background />
   <div id="intro" class="absolute top-1"> </div>
-  <MessageMe/>
   <Intro />
   <Skillset id="skillSet"/>
   <AboutMe id="aboutMe"/>
   <Portfolios id="portfolios"/>
+  <MessageMe/>
   <Resume id="resume"/>
   <ContactMe id="contactMe"/>
 </div>
