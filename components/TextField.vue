@@ -1,13 +1,13 @@
 <template>
   <label v-if="label"> {{ label }}</label>
 
-  <input
+  <textarea
   v-bind="$attrs"
   :placeholder="label"
   class="field"
   :value="modelValue"
   @input="$emit('update:modelValue',$event.target.value)"
-  >
+  > </textarea>
 
   <p v-if="error" class="errorMessage">
     {{  error }}

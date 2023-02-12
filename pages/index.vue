@@ -11,7 +11,7 @@
 <div v-if="introDone" >
   <Background />
   <div id="intro" class="absolute top-1"> </div>
-
+  <MessageMe/>
   <Intro />
   <Skillset id="skillSet"/>
   <AboutMe id="aboutMe"/>
