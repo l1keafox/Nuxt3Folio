@@ -1,24 +1,54 @@
 <template>
   <div class="flex flex-col w-screen absolute top-[0rem] md:top-[2rem] lg:top-[62rem]  xl:top-[40rem] z-10 py-8 gap-x-2 gap-y-1 items-center justify-center font-josefin">    <h1> Message Me!</h1>
     <form @submit.prevent="submit" class="flex flex-col w-[30rem]">
-      <InputField label="name" v-model="userMessage.name"> </InputField>
-      <InputField label="email" v-model="userMessage.email"> </InputField>
-      <TextField label="message" v-model="userMessage.message" class="h-[10rem]" />
+      <InputField label="name" v-model="name" :error="errors.name"> </InputField>
+      <InputField label="email" v-model="email" :error="errors.email"> </InputField>
+      <TextField label="message" v-model="message" :error="errors.message" class="h-[10rem]" />
       <MyButton type="submit" text="Submit" hover="bg-red-700" color="bg-red-500"/>
     </form>
   </div>
 </template>
 
 <script setup>
-const userMessage = reactive({
-  name:'',
-  email:null,
-  message:''
+import { useField, useForm } from 'vee-validate'
+import { object, string } from 'yup'
+
+const validationSchema = object({
+    email: string().email("Field should contain a valid e-mail").max(255).required("E-mail is required"),
+    // email: value => {
+    //     if (!value) return 'This field is required'
+
+    //     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    //     if (!regex.test(String(value).toLowerCase())) {
+    //       return 'Please enter a valid email address'
+    //     }
+
+    //     return true
+    //   },
+    name: string(),
+    message: string()
 })
 
-function submit(){
-  console.log(userMessage);
-}
+const {handleSubmit, errors} = useForm({
+    validationSchema,
+    initialValues:{
+      email:null,
+      name:null,
+      message:null
+    }
+})
+
+const { value: email } = useField('email')
+const { value: name } = useField('name')
+const { value: message } = useField('message')
+
+const submit = handleSubmit(values => {
+      console.log('submit', values)
+      console.log(errors.name);
+      console.log(errors.email);
+      console.log(errors.message);
+})
+
 </script>
 
 <style lang="scss" scoped>
