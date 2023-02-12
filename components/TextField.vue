@@ -1,5 +1,5 @@
 <template>
-  <label v-if="label"> {{ label }}</label>
+  <label v-if="label"  class="text-white"> {{ label }}</label>
 
   <textarea
   v-bind="$attrs"
