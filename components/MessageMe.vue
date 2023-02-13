@@ -1,5 +1,5 @@
 <template>
-  <div id="messageMe" class="flex flex-col text-3xl w-full absolute top-[222rem] md:top-[202rem] lg:top-[202rem]  xl:top-[202rem] z-10 py-8 gap-x-2 gap-y-1 items-center justify-center font-josefin p-2">
+  <div id="messageMe" class="flex flex-col text-3xl w-full absolute  z-10 py-8 gap-x-2 gap-y-1 items-center justify-center font-josefin p-2">
     <h1> Message Me!</h1>
     <form @submit.prevent="submit" class="flex flex-col w-full md:w-[40rem]  text-xl">
       <InputField label="name" v-model="name" :error="errors.name"> </InputField>

@@ -74,7 +74,26 @@
 </script>
 
 <style>
-
+:root {
+	--g1: rgb(72, 72, 73);
+	--g2: rgb(21, 10, 122);
+	}
+	
+	@keyframes background-pan {
+	from {
+		background-position: 0% center;
+	}
+	to {
+		background-position: -200% center;
+	}
+	}
+	
+	body {
+		background-size: 200%;
+		overflow-x: hidden;
+		animation: background-pan 1s linear infinite;
+		background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
+	}
 #tiles {
 	height: 100vh;
 	width: 100vw;

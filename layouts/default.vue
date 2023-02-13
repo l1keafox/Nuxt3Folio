@@ -20,8 +20,8 @@ const MenuOptions = [
   {'id':'/#aboutMe', 'word':'About Me'},
   {'id':'/#portfolios', 'word':'Projects'},
   // {'id':'/#messageMe', 'word':'Message Me'},
-  // {'id':'/#resume', 'word':'Resume'},
-  // {'id':'/#contactMe', 'word':'Contact Me'}
+  {'id':'/#resume', 'word':'Resume'},
+  {'id':'/#contactMe', 'word':'Contact Me'}
 ]
 </script>
 <style scoped>
