@@ -14,21 +14,11 @@
 import emailjs from "@emailjs/browser";
 import { useField, useForm } from 'vee-validate'
 import { object, string } from 'yup'
-const form = ref(null)
 
 const validationSchema = object({
     email: string().email("Field should contain a valid e-mail").max(255).required("E-mail is required"),
     name: string(),
     message: string()
-})
-onMounted(()=>{
-  watchEffect(() => {
-  if (form.value) {
-    form.value.focus()
-  } else {
-    // not mounted yet, or the element was unmounted (e.g. by v-if)
-  }
-})
 })
 
 const {handleSubmit, errors, setFieldValue} = useForm({
@@ -48,14 +38,16 @@ const handleChange = (event) =>{
   setFieldValue('email',event.target.value)
 }
 const submit = handleSubmit(values => {
-      let ditto = document.getElementById('form');
       let result = emailjs.sendForm(
       "service_3l5kfbj",
       "template_7630s4a",
-      ditto,
+      document.getElementById('form'),
       "b3A_HBPJ0CCCA_D0d"
     )
-    alert("Thank you for sendin me a message,I will get back too you asap");
+    alert("Thank you for sending me a message, I will get back too you asap");
+    email.value = ''
+    name.value = ''
+    message.value = ''
 })
 
 </script>
