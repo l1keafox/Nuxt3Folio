@@ -8,20 +8,21 @@
   </div>
 </Transition>
 
-<div v-if="introDone" >
+<div v-if="logged.in" >
   <Background />
   <div id="intro" class="absolute top-1"> </div>
-
-  <Intro />
-  <Skillset id="skillSet"/>
-  <AboutMe id="aboutMe"/>
-  <Portfolios id="portfolios"/>
-  <Resume id="resume"/>
-  <ContactMe id="contactMe"/>
+  <Intro                      class="top-[5rem]   md:top-[13rem]" />
+  <Skillset id="skillSet"     class="top-[40rem]  md:top-[43rem]  lg:top-[43rem]"/>
+  <AboutMe id="aboutMe"       class="top-[58rem]  md:top-[64rem]  lg:top-[62rem]  xl:top-[70rem]"/>
+  <Portfolios id="portfolios" class="top-[168rem] md:top-[145rem] lg:top-[132rem]"/>
+  <MessageMe                  class="top-[222rem] md:top-[225rem] lg:top-[202rem]  xl:top-[202rem]"/>
+  <Resume id="resume"         class="top-[260rem] md:top-[280rem] lg:top-[250rem] "/>
+  <ContactMe id="contactMe"   class="top-[312rem] md:top-[370rem] lg:top-[340rem]"/>
 </div>
 </template>
 
 <script setup>
+  const logged  = useLogged();
   let introDone = ref(false);
   let clearIntro = ref(false);
   function triggerAnime(){
@@ -50,12 +51,14 @@ to {
   background-position: -200% center;
 }
 }
+
 body {
-background-size: 200%;
-overflow-x: hidden;
-animation: background-pan 10s linear infinite;
-background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
+  background-size: 200%;
+  overflow-x: hidden;
+  animation: background-pan 1s linear infinite;
+  background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
 }
+
 .v-enter-active,
 .v-leave-active {
 transition: opacity 0.5s ease;

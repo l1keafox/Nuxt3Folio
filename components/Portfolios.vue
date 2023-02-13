@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col absolute top-[168rem] md:top-[132rem] w-screen text-center items-center justify-cente  font-mukta text-slate-300 ">
+	<div class="flex flex-col absolute  w-screen text-center items-center justify-cente  font-mukta text-slate-300 ">
 
 		<div id="projectContainer" class="">
 			<template v-for="(project,index) in Portfolios" :key="index">

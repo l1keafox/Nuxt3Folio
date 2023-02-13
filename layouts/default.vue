@@ -19,6 +19,7 @@ const MenuOptions = [
   {'id':'/#skillSet', 'word':'Skill Set'},
   {'id':'/#aboutMe', 'word':'About Me'},
   {'id':'/#portfolios', 'word':'Projects'},
+  // {'id':'/#messageMe', 'word':'Message Me'},
   {'id':'/#resume', 'word':'Resume'},
   {'id':'/#contactMe', 'word':'Contact Me'}
 ]

@@ -3,12 +3,18 @@
 		<div id="backGround" class="overflow-hidden">
 			<div id="blueSplit" class="overflow-hidden"></div>
 
-		<div id="greyParent">
-			<div id="greySplitTop" class="md:top-[100px]"></div>
-			<div id="greySplitMiddle" class="top-[-120px] h-[900px]  md:h-[730px] lg:h-[500px]"></div>
-			<div id="greySplitBottom" class="top-[-150px] md:top-[-500px]"></div>
-		</div>
-		<div id="blackSplit" class="md:h-[95rem] h-[70rem]"></div>
+			<div id="greyParent">
+				<div id="greySplitTop" class="md:top-[100px]"></div>
+				<div id="greySplitMiddle" class="top-[-120px] h-[900px]  md:h-[730px] lg:h-[500px]"></div>
+				<div id="greySplitBottom" class="top-[-150px] md:top-[-500px]"></div>
+			</div>
+			<div id="redParent" class = "top-[80px] md:-top-[50px]">
+				<div id="redSplitTop" class="md:top-[100px]"></div>
+				<div id="redSplitMiddle" class="top-[-120px] h-[100px]  md:h-[730px] lg:h-[500px]"></div>
+				<div id="redSplitBottom" class="top-[-450px] md:top-[-500px]"></div>
+			</div>
+				<div id="blackSplit" class="md:h-[75rem] h-[43rem] top-[32rem] md:top-[45rem]"></div>
+
 	</div>
 </Transition>
 </template>
@@ -63,7 +69,6 @@ export default {
 #blackSplit {
 	position: relative;
 	width: 100%;
-	top: 80px;
 	background-color: rgb(20, 20, 20);
 	transform: skew(0deg, -5deg);
 	z-index: -10000;
@@ -93,6 +98,33 @@ export default {
 	width: 100%;
 	height: 500px;
 	background-color: rgb(200, 200, 200);
+	transform: skew(0deg, -5deg);
+}
+
+
+#redParent {
+	position: relative;
+	width: 100%;
+	z-index: -10000;
+}
+#redSplitBottom {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	
+	background-color: rgb(216, 191, 216);
+	transform: skew(0deg, 5deg);
+}
+#redSplitMiddle {
+	position: relative;
+	width: 100%;
+	background-color: rgb(216, 191, 216);
+}
+#redSplitTop {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background-color: rgb(216, 191, 216);
 	transform: skew(0deg, -5deg);
 }
 
