@@ -1,7 +1,7 @@
 <template>
-	<div class="flex flex-col absolute  w-screen text-center items-center justify-cente  font-mukta text-slate-300 ">
+	<div class="flex flex-col absolute w-screen items-center justify-center font-mukta text-slate-300 ">
 
-		<div id="projectContainer" class="">
+		<div id="projectContainer" class=" md:w-1/2  ">
 			<template v-for="(project,index) in Portfolios" :key="index">
 				<Project v-if="index == pIndex || index == prevIndex || index == nextIndex" :class="{'left':index == prevIndex  ,'center':index == pIndex , 'right':index == nextIndex }" :project="Portfolios[index]" class="project absolute flex  flex-col items-center justify-center"/>
 			</template>
