@@ -3,7 +3,7 @@
 		<h1 class="text-3xl md:text-7xl font-bold pb-5 text-slate-300">
 			{{ project.title }}
 		</h1>
-		<div class="w-9/12 flex  bg-blue-400 rounded flex-col md:flex-row">
+		<div class="w-9/12  xl:w-[75rem]  flex  bg-blue-400 rounded flex-col md:flex-row">
 			<img class="h-[18rem] md:h-[30rem] md:w-1/2" :src="project.img" alt="" />
 			<div class="flex flex-col items-center justify-around md:w-1/2">
 				<p

@@ -1,7 +1,7 @@
 <template>
-	<div class="flex flex-col absolute  w-screen text-center items-center justify-cente  font-mukta text-slate-300 ">
+	<div class="flex flex-col absolute w-screen items-center justify-center font-mukta text-slate-300 ">
 
-		<div id="projectContainer" class="">
+		<div id="projectContainer" class=" md:w-1/2  ">
 			<template v-for="(project,index) in Portfolios" :key="index">
 				<Project v-if="index == pIndex || index == prevIndex || index == nextIndex" :class="{'left':index == prevIndex  ,'center':index == pIndex , 'right':index == nextIndex }" :project="Portfolios[index]" class="project absolute flex  flex-col items-center justify-center"/>
 			</template>
@@ -51,10 +51,19 @@ export default {
 			pIndex: 0,
 			Portfolios: [
 				{
+					title: "Lanista",
+					description:
+						"Persistent online game, where you manage a gladiator school. Manage gladiators training schedule, items, and skills to compete in a unique duel system. Duels/Tournaments/Gladiators are saved for the future.",
+					tech:"Vue 3, Tailwind, Pinia, Express, Mongoose, Nodejs",
+					img: "./lanista.png",
+					repoLink: "https://github.com/l1keafox/lanista",
+					deployLink: "https://lanista.heroku.com",
+				},
+				{
 					title: "Professional Vue Portfolio Mk.IV",
 					description:
 						"This webapp, and my fourth portfolio website, made in Feb of 2023.",
-					tech:"Nuxt3, Tailwind, Pinia, Nuxt-Icon, and Animejs",
+					tech:"Nuxt3, Vite, Tailwind, Pinia, Nuxt-Icon, and Animejs",
 					img: "./markIV.png",
 					repoLink: "https://github.com/l1keafox/Nuxt3Folio",
 					deployLink: "https://vuerayfolio.netlify.app/",
