@@ -1,14 +1,14 @@
 <template>
-	<Transition v-show="showAnime" >
-	<div class="flex flex-col text-center items-center justify-center font-mono text-slate-700 z-10 absolute text-4xl p-10">
-		<p>
+	<div class="flex items-center justify-center w-full text-slate-700 absolute text-4xl p-5 md:p-20">
+    <Transition v-show="showAnime" >
+		<p>                     
 			I am a<span class="text-green-400"> full stack </span>software engineer
 			with a background in <span class="text-red-600">malware</span> research. I
 			enjoy the process of creating programs, websites, clothes and
 			relationships.
 		</p>
-	</div>
 </Transition>
+</div>
 </template>
 
 <script setup>
