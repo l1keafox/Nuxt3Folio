@@ -1,5 +1,8 @@
 <template>
   <div id="messageMe" class="flex flex-col text-3xl w-full absolute  z-10 py-8 gap-x-2 gap-y-1 items-center justify-center font-josefin p-2">
+    <Transition v-show="showAnime" >
+    <div>
+
     <h1> Message Me!</h1>
     <form ref="form" id="form" @submit.prevent="submit" class="flex flex-col w-full md:w-[40rem]  text-xl">
       <InputField label="name" id="from_name" name="from_name" v-model="name" :error="errors.name"> </InputField>
@@ -8,9 +11,12 @@
       <MyButton type="submit" text="Submit" hover="bg-red-700" color="bg-red-500"/>
     </form>
   </div>
+</Transition>
+  </div>
 </template>
 
 <script setup>
+
 import emailjs from "@emailjs/browser";
 import { useField, useForm } from 'vee-validate'
 import { object, string } from 'yup'
@@ -50,8 +56,30 @@ const submit = handleSubmit(values => {
     message.value = ''
 })
 
+
+const showAnime = ref(false)
+onMounted(()=>{
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(!showAnime.value) showAnime.value = entry.isIntersecting;
+      });
+    });
+    const hide = document.getElementById('messageMe');
+    observer.observe(hide);
+})
+
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: all 2s ease;
+}
 
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+  bottom: 0;
+  transform: translateY(100%);
+}
 </style>

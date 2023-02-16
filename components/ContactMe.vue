@@ -1,5 +1,7 @@
 <template>
-    <div class="flex flex-col absolute w-screen  py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-mono text-slate-300">
+    <div id="contactMe" class="flex flex-col absolute w-screen  py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-mono text-slate-300">
+        <Transition v-show="showAnime" >
+        <div>
         <h1> Contact Me </h1>
         <br/>
         <div class ="flex justify-around items-center">
@@ -9,25 +11,36 @@
             <a href="https://github.com/l1keafox" target="_blank" className= "flex flex-col items-center justify-center text-yellow-300  hover:bg-yellow-100">Github<Icon name ="octicon:mark-github-16" /> </a>
         </div>
     </div>
+    </Transition>
+    </div>
 </template>
 
-<script>
+<script setup>
+const showAnime = ref(false)
+onMounted(()=>{
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(!showAnime.value) showAnime.value = entry.isIntersecting;
+      });
+    });
+    const hide = document.getElementById('contactMe');
+    observer.observe(hide);
+})
 
-// import PhoneClassic from 'vue-material-design-icons/PhoneClassic.vue';
-// import Email from 'vue-material-design-icons/Email.vue';
- 
-    export default {
-        name:"ContactMe",
-        components:{
-            // PhoneClassic,
-            // Email
-        }
-    }
 </script>
 
 <style scoped>
 a{
     padding: 5px;
     transition: all .5s ease;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

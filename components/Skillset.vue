@@ -1,7 +1,7 @@
 <template>
+	<div id="skillSet" class=" absolute w-full flex flex-col items-center justify-center   overflow-hidden h-[15rem]"> 
 	<Transition v-show="showAnime">
-		<div
-			class="absolute w-full flex flex-col items-center justify-center   overflow-hidden h-[15rem]">
+		<div>
 			<p
 				className="text-5xl block relative text-center font-mukta  dark:text-slate-400">
 				My Skillset
@@ -17,6 +17,7 @@
 			</div>
 		</div>
 	</Transition>
+</div>
 </template>
 
 <script setup>
@@ -41,9 +42,19 @@ const skills = ref([
 const showAnime = ref(false);
 
 onMounted(() => {
-	setTimeout(() => {
-		showAnime.value = true;
-	}, 100);
+	// setTimeout(() => {
+	// 	showAnime.value = true;
+	// }, 100);
+	const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+				if(!showAnime.value) showAnime.value = entry.isIntersecting;
+      });
+    });
+
+    const hide = document.getElementById('skillSet');
+		console.log(hide);
+    observer.observe(hide);
+
 });
 </script>
 
@@ -79,12 +90,15 @@ onMounted(() => {
 }
 .v-enter-active,
 .v-leave-active {
-	transition: opacity 1.5s ease;
+	transition: all 1.5s ease;
 }
 
 .v-enter-from,
 .v-leave-to {
-	opacity: 0;
+  opacity: 0;
+  bottom: 0;
+  transform: translateY(100%);
+
 }
 .iconSet {
 	color: azure;

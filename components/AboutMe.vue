@@ -1,7 +1,8 @@
 <template>
-  <Transition v-show="showAnime" >
-    <div class="flex flex-col w-screen absolute py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-josefin">
-
+  
+  <div id="aboutMe" class="flex flex-col w-screen absolute py-8 gap-x-2 gap-y-1 text-center items-center justify-center font-josefin">
+    <Transition v-show="showAnime" >
+      <div>
         <h1 className="text-4xl font-bold text-center dark:text-slate-900 "> About Me </h1>
         <div className="flex w-4/5 mx-auto flex-col lg:flex-row">
           <div class="lg:w-full flex justify-center items-center lg:-left-[13px] lg:top-[4rem]">
@@ -51,32 +52,40 @@
             </p>
             <br />
           </div>
-        </div>        
-    </div>
+        </div>     
+      </div>   
   </Transition>
+</div>
 </template>
 
 <script setup>
 const showAnime = ref(false)
 onMounted(()=>{
-	setTimeout(()=>{
-			showAnime.value = true;
-		},100)
-
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(!showAnime.value) showAnime.value = entry.isIntersecting;
+      });
+    });
+    const hide = document.getElementById('aboutMe');
+    observer.observe(hide);
 })
 </script>
 
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-  transition: filter 1.5s ease;
+  transition: all 1s ease;
 }
 
 .v-enter-from,
 .v-leave-to {
   filter:blur(3px);
+  opacity: 0;
+  bottom: 0;
+  transform: translateY(100%);
 }
+
 p{
     text-align: justify;
 }
-</style>
+</style> 
