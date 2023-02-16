@@ -74,7 +74,7 @@ onMounted(()=>{
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-  transition: all 1s ease;
+  transition: all 1s ease-out;
 }
 
 .v-enter-from,

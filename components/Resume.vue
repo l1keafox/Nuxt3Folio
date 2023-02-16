@@ -33,7 +33,7 @@ img{
 }
 .v-enter-active,
 .v-leave-active {
-	transition: all 2.5s ease;
+	transition: all 2.5s ease-out;
 }
 
 .v-enter-from,

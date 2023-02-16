@@ -90,7 +90,7 @@ onMounted(() => {
 }
 .v-enter-active,
 .v-leave-active {
-	transition: all 1.5s ease;
+	transition: all 1.5s ease-out;
 }
 
 .v-enter-from,
@@ -98,7 +98,6 @@ onMounted(() => {
   opacity: 0;
   bottom: 0;
   transform: translateY(100%);
-
 }
 .iconSet {
 	color: azure;
