@@ -16,7 +16,7 @@ const logged  = useLogged();
 const tailWind = "bg hover:bg-black p-2 md:p-3 md:pl-5 font-mukta"
 const MenuOptions = [
   {'id':'/#intro', 'word':'Intro'},
-  {'id':'/#skillSet', 'word':'Skill Set'},
+  // {'id':'/#skillSet', 'word':'Skill Set'},
   {'id':'/#aboutMe', 'word':'About Me'},
   {'id':'/#portfolios', 'word':'Projects'},
   // {'id':'/#messageMe', 'word':'Message Me'},
