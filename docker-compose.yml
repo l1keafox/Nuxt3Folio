@@ -4,6 +4,7 @@ volumes:
   node_modules:
 services:
   my-app-dev:
+    restart: unless-stopped
     build:
       context: .
       dockerfile: ./.dockerfile
